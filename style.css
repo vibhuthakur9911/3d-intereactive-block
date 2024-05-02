@@ -1,0 +1,97 @@
+
+@import url(https://fonts.googleapis.com/css?family=Rokkitt);
+@import url(https://fonts.googleapis.com/css?family=Numans);
+
+body {
+    font-family: Numans;
+}
+
+#tips,
+h1 {
+    color: #444;
+    user-select: none;
+    margin: 5px;
+}
+
+#transform {
+    width: 300px;
+    height: 300px;
+    background: #DD312F;
+    border: 5px solid #444;
+    color: #444;
+    margin: 50px auto;
+    cursor: move;
+    transform-style: preserve-3d;
+}
+
+#css {
+    font-family: Rokkitt;
+    background: #002A38;
+    border: 1px solid #444;
+    color: #B98D00;
+    padding: 10px;
+}
+
+#css:before {
+    content: "transform: ";
+    color: #D33683;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+   
+}
+
+.flip-card:focus {
+    outline: 0;
+}
+
+/* 
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+} */
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* HERE */
+}
+
+.flip-card-front {
+    background: linear-gradient(to left, #4364f7, #6fb1fc);
+    color: black;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(1.jpg);
+    background-size: 100%;
+}
+
+.flip-card-back {
+    /* background: linear-gradient(to right, #4364f7, #6fb1fc); */
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(2.jpg);
+    background-size: 100%;
+}

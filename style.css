@@ -3,9 +3,11 @@
 @import url(https://fonts.googleapis.com/css?family=Numans);
 
 body {
-    font-family: Numans;
+    /* font-family: Numans; */
+    background: radial-gradient(#454545, #000, #000);
+    height: 100%;
+    margin: 0;
 }
-
 #tips,
 h1 {
     color: #444;
@@ -22,8 +24,8 @@ h1 {
     margin: 50px auto;
     cursor: move;
     transform-style: preserve-3d;
+    box-shadow: 11px 20px 71px 17px #0000004d;
 }
-
 #css {
     font-family: Rokkitt;
     background: #002A38;
